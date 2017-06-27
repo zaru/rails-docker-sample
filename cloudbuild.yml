@@ -16,7 +16,7 @@ steps:
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/rails-docker-sample:$BRANCH_NAME-$REVISION_ID', '.' ]
 
 - name: 'gcr.io/$PROJECT_ID/rails-docker-sample:$BRANCH_NAME-$REVISION_ID'
-  args: [ 'RAILS_ENV=test', 'bundle', 'exec', 'rails', 'test' ]
+  args: [ 'bundle', 'exec', 'rails', 'test' ]
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ["push", "gcr.io/$PROJECT_ID/rails-docker-sample:$BRANCH_NAME-$REVISION_ID"]
