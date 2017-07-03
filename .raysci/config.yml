@@ -1,12 +1,6 @@
-build:
-  commands:
-    - |
-      docker build -t rails-docker-sample \
-        --build-arg RAILS_ENV=production \
-        --build-arg SECRET_KEY_BASE=54d3dfc98e6ef531a0b071efd897623943b0871be \
-        .
-    - docker run -it -d -w /app -v "$PWD:/app" -p 9292:9292 rails-docker-sample
-
+app:
+  port: 9292
 benchmark:
-  targets:
-    - http://localhost:9292/
+  target_paths:
+  - /
+  - /hoge
