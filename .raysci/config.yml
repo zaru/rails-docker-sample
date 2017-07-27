@@ -5,4 +5,4 @@ db:
 benchmark:
   target_paths:
   - /
-  - /hoge
+  - /articles
