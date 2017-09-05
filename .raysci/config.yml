@@ -1,7 +1,14 @@
-app:
-  port: 9292
-db:
-  image: mysql:5.6
+type: rails
+build:
+  app:
+    port: 9292
+    env:
+    - name: REDIS_HOST
+      value: 127.0.0.1
+  containers:
+  - image: mysql:5.6
+    name: db
+
 benchmark:
   target_paths:
   - /
