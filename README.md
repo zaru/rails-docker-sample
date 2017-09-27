@@ -1,3 +1,5 @@
+test
+
 ```
 $ docker build -t rails-docker-sample .
 $ docker run --rm -it -d -w /app -v "$PWD:/app" -p 9292:9292 -n rails-docker-sample rails-docker-sample
